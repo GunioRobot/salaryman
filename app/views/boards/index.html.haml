@@ -1,0 +1,13 @@
+%h1 Boards
+
+%ul
+  - for board in @boards
+    %li
+      = board.name
+      = board.created_at.to_s
+      = link_to 'Show', board
+      = link_to 'Edit', edit_board_path(board)
+      = link_to 'Destroy', board, :confirm => 'Are you sure?', :method => :delete
+
+%p
+  = link_to 'New Board', new_board_path

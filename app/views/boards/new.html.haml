@@ -1,0 +1,13 @@
+%h1 New Board
+
+- form_for(@board) do |form|
+  = form.error_messages
+
+  %p
+    = form.label :name
+    = form.text_field :name
+
+  %p
+    = form.submit 'Create'
+
+= link_to 'Back', boards_path
