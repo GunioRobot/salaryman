@@ -1,0 +1,28 @@
+My lrn2rails app:
+
+project salaryman aka yet another imageboard
+
+streetmap (where we're going we don't need roads):
+
+initial features:
+- essentially an imageboard
+- allow posting of youtube videos too
+- users for admin/mods
+- admin can create boards
+- standard *chan-style "single" threaded conversations within a board
+- to create a thread must post image or video
+- admin/mods can delete threads
+- logging
+
+later ideas:
+- trippers (tripcodes) are a different kind of user?
+- can pm a tripper
+- ajax it (new posts are displayed immediately)
+- markdown for posts
+- threads eventually die?
+- IP based bans
+- captcha
+
+tech:
+
+RoR (w/ Haml/Sass), Paperclip, RMagick, elbow grease, jQuery, MySQL
