@@ -4,6 +4,7 @@ Salaryman::Application.routes.draw do
       resources :replies
     end
   end
+  root :to => "topics#index"
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
