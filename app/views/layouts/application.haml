@@ -1,0 +1,21 @@
+!!!
+%html
+  %head
+    %title Salaryman
+    = stylesheet_link_tag :all
+    = javascript_include_tag :defaults
+    = csrf_meta_tag
+  %body
+    = render :partial => 'layouts/breadcrumbs'
+    = yield
+  %style{:type => 'text/css'}
+    :sass
+      body
+        :margin 20px 80px
+        :font-family monospace
+      a
+        :color red
+      .field_with_errors
+        :color #880000
+      label, input, textarea
+        :display block

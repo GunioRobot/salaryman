@@ -1,0 +1,12 @@
+%h1
+  New post in  
+  %em= @topic.name
+
+= form_for [@topic, @post], :html => {:multipart => :true} do |f|
+  = f.label         :subject, "Subject #{@post.errors.on :subject}"
+  = f.text_field    :subject
+  = f.label         :image, "Image #{@post.errors.on :image}"
+  = f.file_field    :image
+  = f.label         :body, "Body #{@post.errors.on :body}"
+  = f.text_area     :body
+  = f.submit

@@ -1,0 +1,42 @@
+%h1= @topic.name
+
+.new= link_to '+ New Post', new_topic_post_path(@topic)
+
+- for post in @topic.posts
+  .post
+    .subject= link_to post.display_subject, topic_post_path(@topic, post)
+    .image= link_to image_tag(post.image.url(:thumb)), topic_post_path(@topic, post) if post.image?
+
+    .body=    post.body
+
+    - for reply in post.replies 
+      .reply
+        .subject= reply.subject
+        .image=   image_tag reply.image.url(:thumb) if reply.image?
+        .body=    reply.body
+  
+%style
+  :sass
+    .post
+      :border-top 2px dotted black
+      :padding 10px 0
+    .subject
+      :font-weight bold
+    .reply
+      :border-top 1px dotted black 
+      :margin-top 10px
+      :padding 10px 40px
+    .new a
+      :position absolute
+      :right 80px
+      :top 50px
+      :background red
+      :color white
+      :-webkit-border-radius 5px
+      :-moz-border-radius 5px
+      :-webkit-box-shadow 1px 1px 0 rgba(0,0,0,.3) 
+      :display block
+      :width 100px
+      :padding 10px
+      :text-align center
+      :text-decoration none

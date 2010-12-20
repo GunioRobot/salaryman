@@ -1,0 +1,7 @@
+%h1 Konban-wa, Watashi-wa Salaryman-des!
+Please enjoy the following topics:
+%ul.topics
+  - for topic in @topics
+    %li= link_to "#{topic.name} #{'(empty)' if topic.posts.none?}", topic_posts_path(topic)
+
+= "run rake db:seed to set up the default topics (they're defined in db/seeds.rb)" if @topics.none?

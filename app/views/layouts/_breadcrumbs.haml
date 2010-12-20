@@ -1,0 +1,8 @@
+.breadcrumbs
+  = link_to 'Home', topics_path 
+  - if @topic
+    &rarr;
+    = link_to @topic.name, topic_posts_path(@topic)
+  - if @post
+    &rarr;
+    = link_to @post.display_subject if @post
