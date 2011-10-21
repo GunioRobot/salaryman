@@ -76,7 +76,7 @@ When %r{this plugin is available} do
   $LOAD_PATH << "#{PROJECT_ROOT}/lib"
   require 'paperclip'
   When %{I save the following as "vendor/plugins/paperclip/rails/init.rb"},
-       IO.read("#{PROJECT_ROOT}/rails/init.rb") 
+       IO.read("#{PROJECT_ROOT}/rails/init.rb")
 end
 
 When %r{I run "([^"]*)"} do |command|

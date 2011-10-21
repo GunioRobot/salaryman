@@ -5,7 +5,7 @@
   .image= image_tag @post.image.url(:main) if @post.image?
   .body=    @post.body
 
-  - for reply in @post.replies 
+  - for reply in @post.replies
     .reply
       .subject= reply.subject
       .image=   image_tag reply.image.url(:main) if reply.image?
@@ -20,7 +20,7 @@
     = f.label      :body
     = f.text_area  :body
     = f.submit
-  
+
 %style
   :sass
     .post
@@ -29,6 +29,6 @@
     .subject
       :font-weight bold
     .reply
-      :border-top 1px dotted black 
+      :border-top 1px dotted black
       :margin-top 10px
       :padding 10px 40px

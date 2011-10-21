@@ -14,9 +14,9 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = @topic.posts.new(params[:post]) 
+    @post = @topic.posts.new(params[:post])
     if @post.save
-      redirect_to [@topic, @post] 
+      redirect_to [@topic, @post]
     else
       render :new
     end

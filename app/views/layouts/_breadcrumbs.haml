@@ -1,5 +1,5 @@
 .breadcrumbs
-  = link_to 'Home', topics_path 
+  = link_to 'Home', topics_path
   - if @topic
     &rarr;
     = link_to @topic.name, topic_posts_path(@topic)
